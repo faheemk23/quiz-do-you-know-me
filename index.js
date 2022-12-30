@@ -21,7 +21,7 @@ function play(question, answer) {
   
       score++
     } else {
-      console.log("Wrong")
+      console.log("Wrong!")
     }
     console.log("Current score: " + score)
     console.log("----------------------------------------")
