@@ -10,7 +10,7 @@ function welcome() {
     console.log("----------------------------------------")
 }
 
-    // play function
+// play function
 
 function play(question, answer) {
 
