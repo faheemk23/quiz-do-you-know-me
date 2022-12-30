@@ -51,4 +51,10 @@ var questions = [
       answer: "no"
     }
 ]
+
+function game() {
+    for (i = 0; i < questions.length; i++) {
+      play(questions[i].question, questions[i].answer)
+    }
+}
   
