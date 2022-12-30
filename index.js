@@ -58,3 +58,21 @@ function game() {
     }
 }
   
+// data of high scores
+var highScore = [
+    {
+      name: "Himanshu",
+      score: 4
+    },
+    {
+      name: "Divya",
+      score: 3
+    }
+]
+
+function showScores() {
+    console.log("Congratulations, your final score is: " + score)
+    console.log("High scores are as follows. Send a screenshot if you have broken one.")
+    highScore.map(i => console.log(i.name + " : " + i.score))
+}
+  
