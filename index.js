@@ -27,3 +27,28 @@ function play(question, answer) {
     console.log("----------------------------------------")
 }
   
+// array of objects
+
+var questions = [
+    {
+      question: 'Where do i live?(Hint: city name) ',
+      answer: "greater Noida"
+    },
+    {
+      question: "Did i study in Delhi University? ",
+      answer: 'yes'
+    },
+    {
+      question: "Am i older than 20? ",
+      answer: 'yes'
+    },
+    {
+      question: "Do i like batman? ",
+      answer: 'yes'
+    },
+    {
+      question: "Do i like cricket? ",
+      answer: "no"
+    }
+]
+  
