@@ -10,4 +10,3 @@ function welcome() {
     console.log("----------------------------------------")
     }
 
-console.log('a')
