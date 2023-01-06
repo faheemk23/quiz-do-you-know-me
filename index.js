@@ -1,13 +1,15 @@
+var chalk = require("chalk");
 var readlineSync = require('readline-sync')
 
 var score = 0
 
 // welcome function
+var usrName = readlineSync.question("What's your name? ")
 
 function welcome() {
-  var usrName = readlineSync.question("What's your name? ")
+
   console.log("")
-  console.log("Hello " + usrName + ", welcome to DO YOU KNOW FAHEEM!")
+  console.log("Hello " + chalk.blue(usrName) + ", welcome to DO YOU KNOW FAHEEM!")
   console.log("Note: The answers are case-insensitive.")
   console.log("----------------------------------------")
 }
@@ -19,11 +21,11 @@ function play(question, answer) {
   var usrAns = readlineSync.question(question)
 
   if (usrAns.toUpperCase() === answer.toUpperCase()) {
-    console.log("Right!")
+    console.log(chalk.green("Right!"))
 
     score++
   } else {
-    console.log("Wrong!")
+    console.log(chalk.red("Wrong!"))
   }
   console.log("Current score: " + score)
   console.log("----------------------------------------")
@@ -51,6 +53,10 @@ var questions = [
   {
     question: "Do i like cricket? ",
     answer: "no"
+  },
+  {
+    question: "What subject I did my graduation in? ",
+    answer: "physics"
   }
 ]
 
@@ -60,24 +66,52 @@ function game() {
   }
 }
 
-// data of high scores
+//data of high scores
 var highScore = [
   {
     name: "Himanshu",
-    score: 4
+    score: 6
   },
   {
     name: "Divya",
-    score: 3
+    score: 5
+  },
+  {
+    name:"Jane",
+    score:4
+  },
+  {
+    name:"Kaushal",
+    score:4
   }
 ]
 
 function showScores() {
-  console.log("Congratulations, your final score is: " + score)
-  console.log("High scores are as follows. Send a screenshot if you have broken one.")
-  highScore.map(i => console.log(i.name + " : " + i.score))
+  console.log("Your final score is: " + chalk.green(score))
+  console.log("High scores are as follows: ")
+  highScore.map(i => console.log(chalk.blue(i.name) + " : " + chalk.green(i.score)))
 }
 
 welcome();
 game();
-showScores();
+
+var scoreList = Object.values(highScore)
+
+for (i = 0; i < scoreList.length; i++) {
+  if (score >= scoreList[i].score) {
+    console.log(chalk.green("Congratulations, you have beaten a high score."))
+    console.log()
+    highScore.splice(i,0,{name:usrName,score:score})
+    showScores()
+    break
+  } else {
+    if (i===scoreList.length-1){
+      console.log(chalk.red("Sorry you couldn't beat a high score. Better luck next time!"))
+      showScores()
+    }else{
+      continue
+    }
+
+  }
+}
+
