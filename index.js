@@ -36,27 +36,27 @@ function play(question, answer) {
 var questions = [
   {
     question: 'Where do i live?(Hint: city name) ',
-    answer: "greater Noida"
+    answer: "Greater Noida"
   },
   {
     question: "Did i study in Delhi University? ",
-    answer: 'yes'
+    answer: 'Yes'
   },
   {
     question: "Am i older than 20? ",
-    answer: 'yes'
+    answer: 'Yes'
   },
   {
     question: "Do i like batman? ",
-    answer: 'yes'
+    answer: 'Yes'
   },
   {
     question: "Do i like cricket? ",
-    answer: "no"
+    answer: "No"
   },
   {
     question: "What subject I did my graduation in? ",
-    answer: "physics"
+    answer: "Physics"
   }
 ]
 
