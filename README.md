@@ -6,7 +6,7 @@ A CLI app made with Javascript using Replit IDE.
 
 ## About:
 
-The project was made as a part of Level Zero of [neogcamp](https://neog.camp/). A quiz for friends to see how well do they know me, with 6 questions and at the end their final scores and the high scores are given. I have also added functionality such that if user breaks a high score updated high scores are shown . Used 'chalk' package for better visuals.
+The project was made as a part of Level Zero of [neogcamp](https://neog.camp/). A quiz for friends to see how well do they know me, with 6 questions and at the end their final scores and the high scores are given. I have also added functionality such that if user breaks a high score, updated high scores are shown . Used 'chalk' package for better visuals.
 
 [You can access the quiz here](https://replit.com/@FaheemKhan18/markOne?embed=1&output=1)
 
